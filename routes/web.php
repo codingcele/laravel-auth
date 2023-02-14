@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
 
 Route::get('/', [MainController::class, 'home']);
+Route::get('/logged', [MainController::class, 'logged']) -> middleware(['auth', 'verified']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
