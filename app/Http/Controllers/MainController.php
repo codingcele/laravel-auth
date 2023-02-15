@@ -4,11 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Project;
+
 class MainController extends Controller
 {
     public function home() {
 
-        return view('pages.home');
+        $projects = Project :: all();
+
+        return view('pages.home', compact('projects'));
 
     }
 
@@ -17,4 +21,10 @@ class MainController extends Controller
         return view('pages.logged');
 
     }
+
+    public function projectShow(Project $project) {
+
+        return view('pages.projectShow', compact('project'));
+    }
+
 }
