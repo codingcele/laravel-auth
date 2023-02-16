@@ -1,5 +1,9 @@
 @extends('layouts.main-layout')
 
 @section('content')
-    <h1>LOGGED</h1>
+
+    <div class="container">
+        <h1>LOGGED</h1>
+    </div>
+    
 @endsection
