@@ -12,7 +12,7 @@
             
         </div>
 
-        <form method="POST" action="{{ route('project.store') }}">
+        <form method="POST" action="{{ route('project.store') }}" enctype="multipart/form-data">
             @csrf
             <label for="name">Name</label>
             <input type="text" name="name">
@@ -21,7 +21,7 @@
             <input type="text" name="description">
             <br>
             <label for="main_image">Main image</label>
-            <input type="url" name="main_image">
+            <input type="file" name="main_image">
             <br>
             <label for="release_date">Release date</label>
             <input type="date" name="release_date">
